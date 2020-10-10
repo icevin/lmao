@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'settingsmenu.ui'
+# Form implementation generated from reading ui file 'washmenu.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
@@ -31,58 +31,24 @@ class Ui_SettingsMenu(object):
         self.homeButton.setPixmap(QtGui.QPixmap("img/icon_home.png"))
         self.homeButton.setScaledContents(True)
         self.homeButton.setObjectName("homeButton")
-        self.brightnessSlider = QtWidgets.QSlider(self.centralWidget)
-        self.brightnessSlider.setGeometry(QtCore.QRect(70, 70, 671, 51))
-        self.brightnessSlider.setMaximum(255)
-        self.brightnessSlider.setProperty("value", 75)
-        self.brightnessSlider.setOrientation(QtCore.Qt.Horizontal)
-        self.brightnessSlider.setObjectName("brightnessSlider")
         self.brightnessPrompt = QtWidgets.QLabel(self.centralWidget)
         self.brightnessPrompt.setGeometry(QtCore.QRect(300, 30, 191, 41))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(14)
+        font.setBold(True)
+        font.setWeight(75)
         self.brightnessPrompt.setFont(font)
         self.brightnessPrompt.setAlignment(QtCore.Qt.AlignCenter)
         self.brightnessPrompt.setObjectName("brightnessPrompt")
         self.brightnessLvlLabel = QtWidgets.QLabel(self.centralWidget)
-        self.brightnessLvlLabel.setGeometry(QtCore.QRect(300, 130, 191, 41))
+        self.brightnessLvlLabel.setGeometry(QtCore.QRect(60, 60, 641, 361))
         font = QtGui.QFont()
         font.setFamily("Roboto")
         font.setPointSize(14)
         self.brightnessLvlLabel.setFont(font)
-        self.brightnessLvlLabel.setAlignment(QtCore.Qt.AlignCenter)
+        self.brightnessLvlLabel.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.brightnessLvlLabel.setObjectName("brightnessLvlLabel")
-        self.deleteAllButton = QtWidgets.QPushButton(self.centralWidget)
-        self.deleteAllButton.setGeometry(QtCore.QRect(290, 200, 211, 51))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(14)
-        self.deleteAllButton.setFont(font)
-        self.deleteAllButton.setObjectName("deleteAllButton")
-        self.fastScanButton = QtWidgets.QRadioButton(self.centralWidget)
-        self.fastScanButton.setGeometry(QtCore.QRect(320, 340, 141, 17))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(12)
-        self.fastScanButton.setFont(font)
-        self.fastScanButton.setChecked(True)
-        self.fastScanButton.setObjectName("fastScanButton")
-        self.accurateScanButton = QtWidgets.QRadioButton(self.centralWidget)
-        self.accurateScanButton.setGeometry(QtCore.QRect(320, 370, 161, 17))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(12)
-        self.accurateScanButton.setFont(font)
-        self.accurateScanButton.setObjectName("accurateScanButton")
-        self.scanModeLabel = QtWidgets.QLabel(self.centralWidget)
-        self.scanModeLabel.setGeometry(QtCore.QRect(290, 300, 221, 31))
-        font = QtGui.QFont()
-        font.setFamily("Roboto")
-        font.setPointSize(14)
-        self.scanModeLabel.setFont(font)
-        self.scanModeLabel.setAlignment(QtCore.Qt.AlignCenter)
-        self.scanModeLabel.setObjectName("scanModeLabel")
         SettingsMenu.setCentralWidget(self.centralWidget)
         self.mainToolBar = QtWidgets.QToolBar(SettingsMenu)
         self.mainToolBar.setEnabled(False)
@@ -96,10 +62,17 @@ class Ui_SettingsMenu(object):
     def retranslateUi(self, SettingsMenu):
         _translate = QtCore.QCoreApplication.translate
         SettingsMenu.setWindowTitle(_translate("SettingsMenu", "Laundry Manager and Optimizer"))
-        self.brightnessPrompt.setText(_translate("SettingsMenu", "Brightness"))
-        self.brightnessLvlLabel.setText(_translate("SettingsMenu", "Current level: 30"))
-        self.deleteAllButton.setText(_translate("SettingsMenu", "Remove All Items"))
-        self.fastScanButton.setText(_translate("SettingsMenu", "Fast Scannning"))
-        self.accurateScanButton.setText(_translate("SettingsMenu", "Accurate Scanning"))
-        self.scanModeLabel.setText(_translate("SettingsMenu", "Symbol Scan Mode"))
+        self.brightnessPrompt.setText(_translate("SettingsMenu", "Wash Instructions"))
+        self.brightnessLvlLabel.setText(_translate("SettingsMenu", "1. Remove all items from the bottom-left section of the hamper\n"
+"2. Set the washing machine to 30 degrees\n"
+"3. Add detergent and wash. Add bleach without chlorine\n"
+"4. Remove clothes and tumble dry on a LOW setting\n"
+"\n"
+"1. Remove all items from the bottom-right section of the hamper\n"
+"2. Add the miscellaneous dark items from the top-right section\n"
+"3. Set the washing machine to 40 degrees Celsius\n"
+"4. Add detergent and wash. Do NOT add bleach\n"
+"5. Remove clothes and tumble dry on a HIGH setting\n"
+"\n"
+""))
 

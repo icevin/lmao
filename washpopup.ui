@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ConfirmMenu</class>
- <widget class="QMainWindow" name="ConfirmMenu">
+ <class>WashPopup</class>
+ <widget class="QMainWindow" name="WashPopup">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -37,7 +37,7 @@
   <property name="windowTitle">
    <string>Laundry Manager and Optimizer</string>
   </property>
-  <widget class="QWidget" name="confirmMenuWidget">
+  <widget class="QWidget" name="washPopupWidget">
    <property name="minimumSize">
     <size>
      <width>320</width>
@@ -56,27 +56,11 @@
      <height>480</height>
     </size>
    </property>
-   <widget class="QFrame" name="detectedSymbolFrame">
+   <widget class="QLabel" name="fullDetectedLabel">
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>60</y>
-      <width>801</width>
-      <height>80</height>
-     </rect>
-    </property>
-    <property name="frameShape">
-     <enum>QFrame::NoFrame</enum>
-    </property>
-    <property name="frameShadow">
-     <enum>QFrame::Raised</enum>
-    </property>
-   </widget>
-   <widget class="QLabel" name="itemDetectedLabel">
-    <property name="geometry">
-     <rect>
-      <x>0</x>
-      <y>10</y>
+      <y>40</y>
       <width>801</width>
       <height>41</height>
      </rect>
@@ -84,23 +68,23 @@
     <property name="font">
      <font>
       <family>Roboto</family>
-      <pointsize>20</pointsize>
+      <pointsize>24</pointsize>
       <weight>50</weight>
       <bold>false</bold>
      </font>
     </property>
     <property name="text">
-     <string>Symbols Detected</string>
+     <string>Hamper section detected as full!</string>
     </property>
     <property name="alignment">
      <set>Qt::AlignCenter</set>
     </property>
    </widget>
-   <widget class="QPushButton" name="confirmScanBtn">
+   <widget class="QPushButton" name="confirmWashBtn">
     <property name="geometry">
      <rect>
       <x>230</x>
-      <y>390</y>
+      <y>380</y>
       <width>151</width>
       <height>51</height>
      </rect>
@@ -115,11 +99,11 @@
      <string>Confirm</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="retryScanBtn">
+   <widget class="QPushButton" name="cancelWashBtn">
     <property name="geometry">
      <rect>
       <x>430</x>
-      <y>390</y>
+      <y>380</y>
       <width>131</width>
       <height>51</height>
      </rect>
@@ -131,15 +115,15 @@
      </font>
     </property>
     <property name="text">
-     <string>Retry</string>
+     <string>Cancel</string>
     </property>
    </widget>
    <widget class="QLabel" name="hamperSectionView">
     <property name="geometry">
      <rect>
-      <x>190</x>
-      <y>160</y>
-      <width>431</width>
+      <x>120</x>
+      <y>120</y>
+      <width>561</width>
       <height>201</height>
      </rect>
     </property>
@@ -147,7 +131,7 @@
      <string/>
     </property>
     <property name="pixmap">
-     <pixmap>img/place_tl.png</pixmap>
+     <pixmap>img/wash_tl.png</pixmap>
     </property>
     <property name="scaledContents">
      <bool>true</bool>
